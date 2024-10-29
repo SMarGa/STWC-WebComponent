@@ -1,0 +1,17 @@
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin full-height {
+  height: 100vh;
+}
+
+@mixin title {
+  font-size: 2em;
+  padding: 24px;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "news" "ratings" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 12px;
+  max-width: 100vw;
+  background-color: #f0f0f0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 12px;
+  border-radius: 24px;
+  background-color: #52ad14;
+  grid-area: header;
+}
+
+.news {
+  margin: 12px;
+  border-radius: 24px;
+  background-color: #bdf598;
+  grid-area: news;
+}
+.news .title {
+  font-size: 2em;
+  padding: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.news .news-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+  padding: 24px;
+}
+.news .news-box .news-item {
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+}
+.news .news-box .news-item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news .news-box .news-item .news-poster {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.news .news-box .news-item .news-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ratings {
+  margin: 12px;
+  border-radius: 24px;
+  background-color: #bdf598;
+  grid-area: ratings;
+}
+.ratings .title {
+  font-size: 2em;
+  padding: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.ratings .ratin-box {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+}
+.ratings .ratin-box .rating-item {
+  background-color: white;
+  padding: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+}
+.ratings .ratin-box .rating-item .avatar {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ratings .ratin-box .rating-item .username {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.ratings .ratin-box .rating-item .rating {
+  font-size: 1rem;
+}
+
+.footer {
+  margin: 12px;
+  border-radius: 24px;
+  background-color: #52ad14;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */

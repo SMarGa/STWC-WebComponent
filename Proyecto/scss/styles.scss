@@ -1,0 +1,91 @@
+@import "./_mixins";
+@import "./_variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  @include full-height;
+  background-color: $main-container-color;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "news"
+    "ratings"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(auto, 1fr) auto auto;
+  gap: 12px;
+  overflow-y: auto;
+  padding-bottom: 12px;
+}
+
+.header {
+  @include center-content;
+  @include section-container;
+  color: black;
+  width: fit-content;
+  justify-self: center;
+  background-color: $main-sections-color;
+  grid-area: header;
+}
+
+.news {
+  @include section-container;
+  background-color: #d9ead3;
+  grid-area: news;
+
+  .title {
+    @include title;
+    background-color: $secondary-sections-color;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    width: fit-content;
+    justify-self: center;
+  }
+
+  .search-input {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+  }
+
+  .news-box {
+    @include card-container;
+  }
+}
+
+.ratings {
+  @include section-container;
+  background-color: #d9ead3;
+  grid-area: ratings;
+
+  .title {
+    @include title;
+    background-color: $secondary-sections-color;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    width: fit-content;
+    justify-self: center;
+  }
+
+  .ratin-box {
+    @include card-container;
+  }
+}
+
+.footer {
+  @include center-content;
+  @include section-container;
+  background-color: $main-sections-color;
+  grid-area: footer;
+  color: white;
+}

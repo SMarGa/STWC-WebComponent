@@ -1,0 +1,30 @@
+<template id="card-rating">
+  <style>
+    .rating {
+      background-color: white;
+      padding: 12px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+      text-align: center;
+    }
+    .avatar {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .username {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+    .rating-score {
+      font-size: 1rem;
+      color: #52ad14;
+    }
+  </style>
+  <div class="rating">
+    <img id="avatar" class="avatar" src="" alt="" />
+    <h2 id="username" class="username"></h2>
+    <p id="rating-score" class="rating-score"></p>
+  </div>
+</template>

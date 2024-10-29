@@ -1,0 +1,33 @@
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin full-height {
+  min-height: 100vh;
+  height: auto;
+}
+
+@mixin title {
+  font-size: 2em;
+  padding: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@mixin section-container {
+  margin: 12px;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+@mixin card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+  padding: 24px;
+}

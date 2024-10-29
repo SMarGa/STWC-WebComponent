@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "title": "Mock News Title 1",
+      "description": "This is a mock description for the first news article",
+      "urlToImage": "https://via.placeholder.com/350x200",
+      "url": "https://example.com/news/1",
+      "publishedAt": "2024-03-20T10:00:00Z"
+    },
+    {
+      "title": "Mock News Title 2",
+      "description": "This is a mock description for the second news article",
+      "urlToImage": "https://via.placeholder.com/350x200",
+      "url": "https://example.com/news/2",
+      "publishedAt": "2024-03-19T15:30:00Z"
+    },
+    {
+      "title": "Mock News Title 3",
+      "description": "This is a mock description for the third news article",
+      "urlToImage": "https://via.placeholder.com/350x200",
+      "url": "https://example.com/news/3",
+      "publishedAt": "2024-03-18T08:45:00Z"
+    }
+  ]
+}

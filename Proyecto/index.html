@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/styles.css" />
+    <script src="components/news-card.js" type="module"></script>
+    <script src="components/rating-card.js" type="module"></script>
+    <script src="scripts/api.js" defer></script>
+    <title>Mockup</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header">
+        <h1>Nexo Informativo</h1>
+      </header>
+      <div class="news">
+        <h2 class="title">
+          Busca tu noticia:
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="..."
+            class="search-input"
+          />
+        </h2>
+        <div class="news-box" id="newsContainer"></div>
+      </div>
+
+      <div class="ratings">
+        <h2 class="title">Ratings</h2>
+        <div class="ratin-box"></div>
+      </div>
+      <footer class="footer">
+        <h1>Footer Component</h1>
+      </footer>
+    </div>
+  </body>
+</html>
