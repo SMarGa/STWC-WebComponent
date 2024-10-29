@@ -13,11 +13,13 @@ class RatingCard extends HTMLElement {
     return ["username", "rating", "avatar"];
   }
 
+  // This is executed when the component is added to the page
   async connectedCallback() {
     await this.loadTemplate();
     this.updateContent();
   }
 
+  // This function loads the template for the rating card
   async loadTemplate() {
     try {
       const response = await fetch("templates/ratingsTemplate.html");
@@ -36,6 +38,7 @@ class RatingCard extends HTMLElement {
     }
   }
 
+  // This function updates the content of the rating card
   updateContent() {
     if (!this.shadowRoot) return;
 

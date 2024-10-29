@@ -13,12 +13,14 @@ class NewsCard extends HTMLElement {
     return ["title", "description", "image", "url", "publishedAt"];
   }
 
+  // This function is executed when the component is added to the page
   async connectedCallback() {
     await this.loadTemplate();
     this.updateContent();
     this.startDateTracking();
   }
 
+  // This function loads the template for the news card
   async loadTemplate() {
     try {
       const response = await fetch("templates/newsTemplate.html");
@@ -37,6 +39,7 @@ class NewsCard extends HTMLElement {
     }
   }
 
+  // This function updates the content of the news card
   updateContent() {
     if (!this.shadowRoot) return;
 
@@ -72,6 +75,7 @@ class NewsCard extends HTMLElement {
         dateInfo.textContent = `Published ${days} days ago`;
       }
 
+      // This event is dispatched to notify that the days have been updated
       this.dispatchEvent(
         new CustomEvent("days-updated", {
           detail: { days },
@@ -81,7 +85,7 @@ class NewsCard extends HTMLElement {
       );
     };
 
-    updateDays();
+    updateDays(); // Update the days when the component is added to the page
     setInterval(updateDays, 86400000); // Update every 24 hours
   }
 }

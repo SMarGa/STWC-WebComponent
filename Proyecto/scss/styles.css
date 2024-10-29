@@ -75,6 +75,14 @@
   padding: 24px;
   background-color: #d9ead3;
   grid-area: ratings;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.ratings.visible {
+  display: flex;
+  flex-direction: column;
 }
 .ratings .title {
   font-size: 2em;
@@ -88,7 +96,7 @@
   border: none;
   width: -moz-fit-content;
   width: fit-content;
-  justify-self: center;
+  margin: 0 auto;
 }
 .ratings .ratin-box {
   display: flex;
@@ -97,6 +105,26 @@
   text-align: center;
   gap: 24px;
   padding: 24px;
+  width: 100%;
+  margin-bottom: 60px;
+  display: none;
+}
+.ratings .ratin-box.visible {
+  display: flex;
+}
+.ratings .toggle-button {
+  margin-top: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff914d;
+  color: white;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ratings .toggle-button:hover {
+  opacity: 0.9;
 }
 
 .footer {

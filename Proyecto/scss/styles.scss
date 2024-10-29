@@ -60,11 +60,19 @@
     @include card-container;
   }
 }
-
 .ratings {
   @include section-container;
   background-color: #d9ead3;
   grid-area: ratings;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; // Add this
+
+  &.visible {
+    display: flex;
+    flex-direction: column;
+  }
 
   .title {
     @include title;
@@ -74,11 +82,33 @@
     border-radius: 12px;
     border: none;
     width: fit-content;
-    justify-self: center;
+    margin: 0 auto; // Center the title
   }
 
   .ratin-box {
     @include card-container;
+    width: 100%;
+    margin-bottom: 60px;
+    display: none; // Hide by default
+
+    &.visible {
+      display: flex; // Show when visible class is added
+    }
+  }
+
+  .toggle-button {
+    margin-top: 12px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff914d;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 
